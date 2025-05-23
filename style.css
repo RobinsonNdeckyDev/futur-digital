@@ -1,0 +1,399 @@
+:root {
+    --primary-color: #B01736;    
+    --accent-color: #FFC107;    
+    --bg-color: #F9F9F9;        
+    --text-color: #222222;       
+    --white: #FFFFFF;            
+}
+
+/* Style général */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-color);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+.sectionTop span{
+    border: 1px solid #B01736;
+    border-radius: 50%;
+    padding: 0.8rem;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sectionTop span a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navbar styles */
+#mainNavbar {
+    position: absolute;
+    top: 0;
+    margin-top: 10px;
+    left: 0.5rem;
+    right: 0.5rem;
+    width: auto;
+    z-index: 1000;
+    background-color: white;
+    transition: all 0.3s ease;
+    padding: 1rem 0;
+}
+
+.navbar-scrolled {
+    position: fixed !important;
+    margin-top: 0 !important;
+    top: 0;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100%;
+    background-color: white !important;
+    /* box-shadow: 0 2px 10px rgb(228, 227, 227); */
+}
+
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    /* background-color: var(--primary-color);
+    transition: width 0.3s ease; */
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: var(--primary-color) !important;
+}
+  
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+    transform: translateY(-2px);
+}
+
+.navbar-brand img {
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover img {
+    transform: scale(1.05);
+}
+
+/* Style du bouton toggle */
+.navbar-toggler {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23B01736' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* Sections */
+.about, .services, .contact {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0;
+}
+
+/* Boutons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    padding: 0.8rem 2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: darken(var(--primary-color), 10%);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(176, 23, 54, 0.3);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    list-style-type: none;
+}
+
+/* Section-top */
+.section-top .fa-brands {
+    color: #B01736;
+}
+
+.header{
+    position: relative;
+}
+
+.fixed-top .navbar {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar par défaut : transparente */
+#mainNavbar {
+  position: absolute;
+  top: 0;
+  margin-top: 10px; 
+  left: 0.5rem; 
+  right: 0.5rem; 
+  width: auto;
+  z-index: 1000;
+  background-color: transparent;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, margin 0.3s ease;
+}
+
+#mainNavbar .fa-solid, .fw-semibold{
+    color: #B01736;
+}
+
+/* Navbar fixée en haut après scroll */
+.navbar-scrolled {
+  position: fixed !important;
+  margin-top: 0 !important; /* remonte en haut quand on scroll */
+  top: 0;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.555) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Section about */
+.about .btn {
+    background-color: #fff;
+    color: #B01736;
+    border-color: #B01736;
+    padding: 0.8rem 2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.about .btn:hover {
+    background-color: #B01736;
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(176, 23, 54, 0.2);
+}
+
+.about .fa-solid{
+    color: #B01736;
+}
+
+.about, .services, .contact {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Section services */
+.services .fa-solid{
+    color: #B01736;
+}
+
+/* Section Contact */
+.contact {
+    padding: 5rem 0;
+    background-color: var(--bg-color);
+}
+
+.contact h2 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.contact h2:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+.contact .form-control {
+    border: 1px solid #e0e0e0;
+    padding: 0.8rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.contact .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(176, 23, 54, 0.15);
+}
+
+.contact .form-select {
+    border: 1px solid #e0e0e0;
+    padding: 0.8rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.contact .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(176, 23, 54, 0.15);
+}
+
+.contact textarea.form-control {
+    min-height: 120px;
+}
+
+.contact .btn {
+    background-color: #fff;
+    border-color: var(--primary-color);
+    padding: 0.8rem 2.5rem;
+    /* border-radius: 30px; */
+    color: #8f1329;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.contact .btn:hover{
+    background-color: #B01736;
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(176, 23, 54, 0.2);
+}
+
+.contact .btn-primary:hover {
+    background-color: #8f1329;
+    border-color: #8f1329;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(176, 23, 54, 0.2);
+}
+
+.contact .fa-solid{
+    color: #B01736;
+}
+
+/* Style des icônes dans la section contact */
+.contact .bi {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+/* Style du cadre de la carte */
+.contact iframe {
+    width: 100%;
+    /* border-radius: 12px; */
+    border: none !important;
+    box-shadow: 0 4px 20px rgba(230, 56, 56, 0.1);
+    margin-top: 1rem;
+}
+
+/* Style des informations de contact */
+.contact .col-lg-5 strong {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.nav-link-footer {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link-footer::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    /* background-color: var(--primary-color, #B01736);
+    transition: width 0.3s ease; */
+}
+
+.nav-link-footer:hover::after,
+.nav-link-footer.active::after {
+    width: 100%;
+}
+
+.nav-link-footer.active {
+    color: var(--primary-color, #B01736) !important;
+    font-weight: 600;
+}
+
+.navbar-brand img, footer img {
+    filter: brightness(0) saturate(100%) invert(15%) sepia(75%) saturate(3640%) hue-rotate(334deg) brightness(89%) contrast(101%);
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px){
+    .sectionTop{
+        display: none;
+    }
+
+    .header .navbar-brand  img{
+        height: 20px;
+        width: 80px;
+    }
+
+    .carousel-inner .carousel-item img{
+        height: 200px;
+    }
+
+    .services .accordion{
+        margin-top: 50px;
+    }
+
+    .about, .services, .contact {
+        min-height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5rem 0;
+    }
+}
