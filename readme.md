@@ -16,7 +16,7 @@ _ Google Fonts pour les polices de caractères
 
 
 # Installation
-1- Cloner le repository Git : git clone https://github.com/votre-nom-de-repository.git
+1- Cloner le repository Git : git clone https://github.com/RobinsonNdeckyDev/futur-digital.git
 Installer les dépendances : npm install
 
 2- Dézipper le fichier Zip
